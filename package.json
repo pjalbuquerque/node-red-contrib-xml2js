@@ -1,0 +1,27 @@
+{
+  "name": "node-red-contrib-xml2js",
+  "version": "0.0.1",
+  "description": "A Node-RED node, convert using library xml2js",
+  "dependencies": {
+    "xml2js": "^0.4.19"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pjalbuquerque/node-red-contrib-xml2js"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "node-red",
+    "xml",
+    "xml2js"
+  ],
+  "node-red": {
+    "nodes": {
+      "xml2js": "xml2js.js"
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/pjalbuquerque/node-red-contrib-xml2js/issues"
+  },
+  "homepage": "https://github.com/pjalbuquerque/node-red-contrib-xml2js#readme"
+}

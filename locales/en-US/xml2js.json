@@ -1,0 +1,26 @@
+{
+    "xml2js": {
+        "label": {
+            "name": "Name",
+            "represent": "Property name for XML tag attributes",
+            "prefix": "Property name for tag text content",
+            "advanced": "Advanced options",
+            "x2o": "XML to Object options",
+            "tagNameProcessors": "tagNameProcessors Options",
+            "attrNameProcessors": "attrNameProcessors Options",
+            "valueProcessors": "valueProcessors Options",
+            "attrValueProcessors": "attrValueProcessors Options",
+            "normalize" : "normalize",
+            "firstCharLowerCase" : "firstCharLowerCase",
+            "stripPrefix" : "stripPrefix",
+            "parseNumbers" : "parseNumbers",
+            "parseBooleans" : "parseBooleans",
+            "ignoreAttrs" : "ignoreAttrs",
+            "explicitRoot" : "explicitRoot",
+            "explicitArray" : "explicitArray"
+        },
+        "errors": {
+            "xml2js": "This node only handles xml strings or js objects."
+        }
+    }
+}

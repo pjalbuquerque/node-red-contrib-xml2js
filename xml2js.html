@@ -1,0 +1,218 @@
+<script type="text/x-red" data-template-name="xml2js">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> <span data-i18n="xml2js.label.name"></span></label>
+        <input type="text" id="node-input-name" data-i18n="[placeholder]xml2js.label.name">
+    </div>
+    <hr align="middle" />
+    <div class="form-row">
+        <label style="width:100%; border-bottom: 1px solid #eee;"><span data-i18n="xml2js.label.x2o"></span></label>
+    </div>
+    <div class="form-row" style="padding-left: 20px;">
+        <label style="width:250px;" for="node-input-attr" data-i18n="xml2js.label.represent"></label>
+        <input type="text" id="node-input-attr" style="text-align:center; width:40px" placeholder="$">
+    </div>
+    <div class="form-row" style="padding-left: 20px;">
+        <label style="width:250px;" for="node-input-chr" data-i18n="xml2js.label.prefix"></label>
+        <input type="text" id="node-input-chr" style="text-align:center; width:40px" placeholder="_">
+    </div>
+    <div class="form-row">
+        <div style="display: inline; padding-left: 20px">
+            <input type="checkbox" id="node-input-ignoreAttrs" style="width:auto; vertical-align:top;">
+            <label style="width: auto;" for="node-input-ignoreAttrs"><span data-i18n="xml2js.label.ignoreAttrs"></span></label>
+        </div>
+        <div style="display: inline; padding-left: 20px">
+            <input type="checkbox" id="node-input-explicitRoot" style="width:auto; vertical-align:top;">
+            <label style="width: auto;" for="node-input-explicitRoot"><span data-i18n="xml2js.label.explicitRoot"></span></label>
+        </div>
+        <div style="display: inline; padding-left: 20px">
+            <input type="checkbox" id="node-input-explicitArray" style="width:auto; vertical-align:top;">
+            <label style="width: auto;" for="node-input-explicitArray"><span data-i18n="xml2js.label.explicitArray"></span></label>
+        </div>
+    </div>
+    <div class="form-row">
+        <label style="width:100%; border-bottom: 1px solid #eee;"><span data-i18n="xml2js.label.tagNameProcessors"></span></label>
+    </div>
+    <div class="form-row">
+        <div style="display: inline; padding-left: 20px">
+            <input type="checkbox" id="node-input-tagNameProcessorsNormalize" style="width:auto; vertical-align:top;">
+            <label style="width: auto;" for="node-input-tagNameProcessorsNormalize"><span data-i18n="xml2js.label.normalize"></span></label>
+        </div>
+        <div style="display: inline; padding-left: 20px">
+            <input type="checkbox" id="node-input-tagNameProcessorsFirstCharLowerCase" style="width:auto; vertical-align:top;">
+            <label style="width: auto;" for="node-input-tagNameProcessorsFirstCharLowerCase"><span data-i18n="xml2js.label.firstCharLowerCase"></span></label>
+        </div>
+        <div style="display: inline; padding-left: 20px">
+            <input type="checkbox" id="node-input-tagNameProcessorsStripPrefix" style="width:auto; vertical-align:top;">
+            <label style="width: auto;" for="node-input-tagNameProcessorsStripPrefix"><span data-i18n="xml2js.label.stripPrefix"></span></label>
+        </div>
+    </div>
+    <div class="form-row">
+        <div style="display: inline; padding-left: 20px">
+            <input type="checkbox" id="node-input-tagNameProcessorsParseNumbers" style="width:auto; vertical-align:top;">
+            <label style="width: auto;" for="node-input-tagNameProcessorsParseNumbers"><span data-i18n="xml2js.label.parseNumbers"></span></label>
+        </div>
+        <div style="display: inline; padding-left: 20px">
+            <input type="checkbox" id="node-input-tagNameProcessorsParseBooleans" style="width:auto; vertical-align:top;">
+            <label style="width: auto;" for="node-input-tagNameProcessorsParseBooleans"><span data-i18n="xml2js.label.parseBooleans"></span></label>
+        </div>
+    </div>
+    <div class="form-row">
+        <label style="width:100%; border-bottom: 1px solid #eee;"><span data-i18n="xml2js.label.attrNameProcessors"></span></label>
+    </div>
+    <div class="form-row">
+        <div style="display: inline; padding-left: 20px">
+            <input type="checkbox" id="node-input-attrNameProcessorsNormalize" style="width:auto; vertical-align:top;">
+            <label style="width: auto;" for="node-input-attrNameProcessorsNormalize"><span data-i18n="xml2js.label.normalize"></span></label>
+        </div>
+        <div style="display: inline; padding-left: 20px">
+            <input type="checkbox" id="node-input-attrNameProcessorsFirstCharLowerCase" style="width:auto; vertical-align:top;">
+            <label style="width: auto;" for="node-input-attrNameProcessorsFirstCharLowerCase"><span data-i18n="xml2js.label.firstCharLowerCase"></span></label>
+        </div>
+        <div style="display: inline; padding-left: 20px">
+            <input type="checkbox" id="node-input-attrNameProcessorsStripPrefix" style="width:auto; vertical-align:top;">
+            <label style="width: auto;" for="node-input-attrNameProcessorsStripPrefix"><span data-i18n="xml2js.label.stripPrefix"></span></label>
+        </div>
+    </div>
+    <div class="form-row">
+        <div style="display: inline; padding-left: 20px">
+            <input type="checkbox" id="node-input-attrNameProcessorsParseNumbers" style="width:auto; vertical-align:top;">
+            <label style="width: auto;" for="node-input-attrNameProcessorsParseNumbers"><span data-i18n="xml2js.label.parseNumbers"></span></label>
+        </div>
+        <div style="display: inline; padding-left: 20px">
+            <input type="checkbox" id="node-input-attrNameProcessorsParseBooleans" style="width:auto; vertical-align:top;">
+            <label style="width: auto;" for="node-input-attrNameProcessorsParseBooleans"><span data-i18n="xml2js.label.parseBooleans"></span></label>
+        </div>
+    </div>
+    <div class="form-row">
+        <label style="width:100%; border-bottom: 1px solid #eee;"><span data-i18n="xml2js.label.valueProcessors"></span></label>
+    </div>
+    <div class="form-row">
+        <div style="display: inline; padding-left: 20px">
+            <input type="checkbox" id="node-input-valueProcessorsNormalize" style="width:auto; vertical-align:top;">
+            <label style="width: auto;" for="node-input-valueProcessorsNormalize"><span data-i18n="xml2js.label.normalize"></span></label>
+        </div>
+        <div style="display: inline; padding-left: 20px">
+            <input type="checkbox" id="node-input-valueProcessorsFirstCharLowerCase" style="width:auto; vertical-align:top;">
+            <label style="width: auto;" for="node-input-valueProcessorsFirstCharLowerCase"><span data-i18n="xml2js.label.firstCharLowerCase"></span></label>
+        </div>
+        <div style="display: inline; padding-left: 20px">
+            <input type="checkbox" id="node-input-valueProcessorsStripPrefix" style="width:auto; vertical-align:top;">
+            <label style="width: auto;" for="node-input-valueProcessorsStripPrefix"><span data-i18n="xml2js.label.stripPrefix"></span></label>
+        </div>
+    </div>
+    <div class="form-row">
+        <div style="display: inline; padding-left: 20px">
+            <input type="checkbox" id="node-input-valueProcessorsParseNumbers" style="width:auto; vertical-align:top;">
+            <label style="width: auto;" for="node-input-valueProcessorsParseNumbers"><span data-i18n="xml2js.label.parseNumbers"></span></label>
+        </div>
+        <div style="display: inline; padding-left: 20px">
+            <input type="checkbox" id="node-input-valueProcessorsParseBooleans" style="width:auto; vertical-align:top;">
+            <label style="width: auto;" for="node-input-valueProcessorsParseBooleans"><span data-i18n="xml2js.label.parseBooleans"></span></label>
+        </div>
+    </div>
+    <div class="form-row">
+        <label style="width:100%; border-bottom: 1px solid #eee;"><span data-i18n="xml2js.label.attrValueProcessors"></span></label>
+    </div>
+    <div class="form-row">
+        <div style="display: inline; padding-left: 20px">
+            <input type="checkbox" id="node-input-attrValueProcessorsNormalize" style="width:auto; vertical-align:top;">
+            <label style="width: auto;" for="node-input-attrValueProcessorsNormalize"><span data-i18n="xml2js.label.normalize"></span></label>
+        </div>
+        <div style="display: inline; padding-left: 20px">
+            <input type="checkbox" id="node-input-attrValueProcessorsFirstCharLowerCase" style="width:auto; vertical-align:top;">
+            <label style="width: auto;" for="node-input-attrValueProcessorsFirstCharLowerCase"><span data-i18n="xml2js.label.firstCharLowerCase"></span></label>
+        </div>
+        <div style="display: inline; padding-left: 20px">
+            <input type="checkbox" id="node-input-attrValueProcessorsStripPrefix" style="width:auto; vertical-align:top;">
+            <label style="width: auto;" for="node-input-attrValueProcessorsStripPrefix"><span data-i18n="xml2js.label.stripPrefix"></span></label>
+        </div>
+    </div>
+    <div class="form-row">
+        <div style="display: inline; padding-left: 20px">
+            <input type="checkbox" id="node-input-attrValueProcessorsParseNumbers" style="width:auto; vertical-align:top;">
+            <label style="width: auto;" for="node-input-attrValueProcessorsParseNumbers"><span data-i18n="xml2js.label.parseNumbers"></span></label>
+        </div>
+        <div style="display: inline; padding-left: 20px">
+            <input type="checkbox" id="node-input-attrValueProcessorsParseBooleans" style="width:auto; vertical-align:top;">
+            <label style="width: auto;" for="node-input-attrValueProcessorsParseBooleans"><span data-i18n="xml2js.label.parseBooleans"></span></label>
+        </div>
+    </div>
+</script>
+<script type="text/x-red" data-help-name="xml2js">
+    <p>Converts between an XML string and its JavaScript object representation, in either direction.</p>
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+        <dt>payload<span class="property-type">object | string</span></dt>
+        <dd>A JavaScript object or XML string.</dd>
+    </dl>
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+        <dt>payload<span class="property-type">object | string</span></dt>
+        <dd>
+            <ul>
+                <li>If the input is a string it tries to parse it as XML and creates a JavaScript object.</li>
+                <li>If the input is a JavaScript object it tries to build an XML string.</li>
+            </ul>
+        </dd>
+        <dt class="optional">options <span class="property-type">object</span></dt>
+        <dd>This optional property can be used to pass in any of the options supported by the underlying library used to convert to and from XML. See <a href="https://github.com/Leonidas-from-XIV/node-xml2js/blob/master/README.md#options" target="_blank">the xml2js docs</a> for more information.</dd>
+    </dl>
+    <h3>Details</h3>
+    <p>When converting between XML and an object, any XML attributes are added as a property named <code>$</code> by default. Any text content is added as a property named <code>_</code>. These property names can be specified in the node configuration.</p>
+    <p>For example, the following XML will be converted as shown:</p>
+    <pre>&lt;p class="tag"&gt;Hello World&lt;/p&gt;</pre>
+    <pre>{
+  "p": {
+    "$": {
+      "class": "tag"
+    },
+    "_": "Hello World"
+  }
+}</pre>
+</script>
+<script type="text/javascript">
+RED.nodes.registerType('xml2js', {
+    category: 'function',
+    color: "#DEBD5C",
+    defaults: {
+        name: { value: "" },
+        attr: { value: "" },
+        chr: { value: "" },
+        ignoreAttrs: { value: false },
+        explicitRoot: { value: false },
+        explicitArray: { value: false },
+        tagNameProcessorsNormalize: { value: false },
+        tagNameProcessorsFirstCharLowerCase: { value: false },
+        tagNameProcessorsStripPrefix: { value: false },
+        tagNameProcessorsParseNumbers: { value: false },
+        tagNameProcessorsParseBooleans: { value: false },
+
+        attrNameProcessorsNormalize: { value: false },
+        attrNameProcessorsFirstCharLowerCase: { value: false },
+        attrNameProcessorsStripPrefix: { value: false },
+        attrNameProcessorsParseNumbers: { value: false },
+        attrNameProcessorsParseBooleans: { value: false },
+
+        valueProcessorsNormalize: { value: false },
+        valueProcessorsFirstCharLowerCase: { value: false },
+        valueProcessorsStripPrefix: { value: false },
+        valueProcessorsParseNumbers: { value: false },
+        valueProcessorsParseBooleans: { value: false },
+
+        attrValueProcessorsNormalize: { value: false },
+        attrValueProcessorsFirstCharLowerCase: { value: false },
+        attrValueProcessorsStripPrefix: { value: false },
+        attrValueProcessorsParseNumbers: { value: false },
+        attrValueProcessorsParseBooleans: { value: false }
+    },
+    inputs: 1,
+    outputs: 1,
+    icon: "parser-xml.png",
+    label: function() {
+        return this.name || "xml2js";
+    },
+    labelStyle: function() {
+        return this.name ? "node_label_italic" : "";
+    }
+});
+</script>
